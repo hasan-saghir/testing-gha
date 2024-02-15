@@ -44,7 +44,7 @@ jobs:
 
       - uses: trstringer/manual-approval@v1
         with:
-          secret: ${{ github.TOKEN }}
+          secret: ${{secrets.GITHUB_TOKEN}}
           approvers: hasan-saghir
           minimum-approvals: 1
           issue-title: "TSR and CR ready?"
