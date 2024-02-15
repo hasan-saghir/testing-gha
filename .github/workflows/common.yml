@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: ekeel/approval-action@v1.0.0
+      - uses: ekeel/approval-action@v1.0.2
         with:
           # A GitHub token with repo scope.
           # The default secrets.GITHUB_TOKEN does not work with octokit to open/update/close issues.
