@@ -30,7 +30,7 @@ jobs:
           secret: ${{secrets.GITHUB_TOKEN}}
           approvers: hasan-saghir
           minimum-approvals: 1
-          issue-title: "Pre Deployment Docs Check"
+          issue-title: "Prod Deployment Docs Check"
           issue-body: "Make sure Security Review, Change Request (CR) & Testing Report have been created and updated in Confluence. You may also add this on the Issue. comment `done` and closed the issue"
           exclude-workflow-initiator-as-approver: false
           additional-approved-words: 'done'
