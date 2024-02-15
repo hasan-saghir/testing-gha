@@ -37,11 +37,11 @@ jobs:
           
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     environment:
       name: prod
     steps:
-      - uses: actions/checkout@v3
-
       - uses: trstringer/manual-approval@v1
         with:
           secret: ${{secrets.GITHUB_TOKEN}}
