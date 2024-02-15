@@ -41,7 +41,7 @@ jobs:
           issue-title: "TSR and CR ready?"
           issue-body: "Make sure it is"
           exclude-workflow-initiator-as-approver: false
-          additional-approved-words: 'closed, close, completed, complete'
+          additional-approved-words: 'completed'
           additional-denied-words: ''
       
       - name: Deploying
