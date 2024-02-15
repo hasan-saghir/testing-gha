@@ -35,6 +35,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+  predeploy:
+    runs-on: ubuntu-latest
+    
+  
   deploy:
     runs-on: ubuntu-latest
     environment:
@@ -42,5 +46,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: hasan-saghir
+          minimum-approvals: 1
+          issue-title: "TSR and CR ready?"
+          issue-body: "Make sure it is"
+          exclude-workflow-initiator-as-approver: false
+          additional-approved-words: ''
+          additional-denied-words: ''
+      
       - name: Deploying
         run: echo Deploying to Prod
